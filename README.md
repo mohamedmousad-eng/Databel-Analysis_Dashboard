@@ -1,19 +1,31 @@
-# Databel-Analysis_Dashboard
-This data analysis project centers on Churn Prediction and Customer Behavior Analysis for Databel, a telecommunications provider. By leveraging a comprehensive snapshot of the customer base, the project aims to identify the key drivers behind customer attrition and uncover actionable insights to improve retention.
-## Project Overview
-The primary objective is to analyze why customers are leaving Databel (churning) and to create a profile of the "at-risk" customer. Since the data is a static snapshot, the focus is shifted away from time-series trends and toward correlative patterns between demographics, plan types, and billing behaviors.
+# Databel: Telecom Customer Churn Analysis
 
+## 📌 Project Overview
+This project focuses on identifying the drivers behind customer attrition for **Databel**, a telecommunications provider. Using a multidimensional dataset, I analyzed customer behavior, demographics, and service plans to uncover why customers leave and how to improve retention.
 
-## Analytical Approach
-To derive value from this data, the project follows three main investigative pillars:
+## 🛠️ Tech Stack
+* **Tools:** SQL, Tableau (or Excel), Data Visualization
+* **Analysis Focus:** Churn Prediction, Customer Segmentation, Revenue Impact
+* **Dataset Structure:** 29 Columns (Snapshot based, No time dimension)
 
-Churn Rate Quantification: Calculating the baseline churn rate to understand the scale of customer loss.
+## ❓ Problem Statement
+The primary challenge for Databel is maintaining a stable customer base.
+* **Unidentified Drivers:** It was unclear if churn was driven by pricing, demographic factors, or specific plan types.
+* **Financial Risk:** Churning customers directly impact the `Total Charges` (cumulative revenue), making retention a financial priority.
+* **Static Data Complexity:** Analyzing a database snapshot required finding correlations within a single point in time rather than over a historical trend.
 
-Demographic Profiling: Using dimensions to see if specific groups (e.g., seniors or residents of a certain region) are more likely to churn.
+## 💡 Solution: The Churn Dashboard
+I developed an analytical framework to categorize and visualize customer data:
+1. **Churn Label Analysis:** Separating the "Yes" vs. "No" churn groups to find commonalities.
+2. **Demographic Mapping:** Analyzing how age, location, and gender impact loyalty.
+3. **Plan Evaluation:** Investigating "Premium Plans" to see if higher-tier services correlate with better retention or higher churn.
+4. **Revenue Analysis:** Using `Total Charges` to identify the "Value at Risk."
 
-Service & Revenue Analysis: Investigating the "Measures" to determine if higher Total Charges or specific premium plan configurations correlate with a higher probability of "Yes" in the Churn Label.
+## 📊 Dataset Highlights
+* **Primary Key:** `Customer_id` (Unique identifier)
+* **Target Variable:** `Churn Label` (Yes/No)
+* **Key Measure:** `Total Charges` (Sum of all monthly charges billed)
+* **Dimensions:** Demographics, Contract types, Premium Plan details
 
-Note: The metadata sheet serves as the "source of truth" for this project, providing specific definitions for the remaining 24 columns not highlighted in the initial summary.
-
-## Strategic Goal
-The end goal of this analysis is to transition from reactive to proactive customer management. By identifying the characteristics of customers who have already churned, Databel can implement targeted loyalty programs and plan adjustments for current customers who mirror those same high-risk traits.
+## 🏁 Strategic Conclusion
+The project provides Databel with the insights needed to move from reactive customer support to **proactive retention**. By profiling the high-risk customer segments identified in this analysis, the business can implement targeted loyalty programs and plan adjustments to reduce the overall churn rate.
